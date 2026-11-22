@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">DualTrack</string>
+    <string name="mode_founder">Founder</string>
+    <string name="mode_student">Student</string>
+    <string name="timeline_title">Your timeline</string>
+    <string name="add_task">Add task</string>
+    <string name="task_title">Title</string>
+    <string name="task_note">Note (optional)</string>
+    <string name="task_date">Date</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="empty_state">Nothing here yet.\nAdd a task to get started.</string>
+    <string name="mark_done">Mark done</string>
+    <string name="delete">Delete</string>
+    <string name="all_modes">All</string>
+    <string name="completed">Completed</string>
+    <string name="today">Today</string>
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Two tracks diverging: a simple "D" split motif -->
+    <path
+        android:pathData="M34,30 L34,78 L52,78 C67,78 76,68 76,54 C76,40 67,30 52,30 Z"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="6"
+        android:fillColor="@android:color/transparent"
+        android:strokeLineJoin="round" />
+    <path
+        android:pathData="M34,54 L76,54"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="5"
+        android:fillColor="@android:color/transparent" />
+</vector>

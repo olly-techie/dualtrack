@@ -15,6 +15,15 @@ Built with Kotlin + Jetpack Compose + Room. No backend, no accounts, no network 
 - Distinct color coding per mode; Material 3 with dynamic color + dark theme
 - Local Room database (survives app restarts)
 
+## Download the APK (easiest)
+
+Grab the latest release from **https://github.com/olly-techie/dualtrack/releases**
+
+Direct link to v0.1.0: https://github.com/olly-techie/dualtrack/releases/download/v0.1.0/app-debug.apk
+
+On your phone: open the link, download the APK, allow "Install unknown apps" for your
+browser/file manager, then install. The "debug certificate" warning is normal.
+
 ## Building without Android Studio (cloud build)
 
 You don't need Android Studio or a local Android SDK. This repo includes a GitHub Actions
@@ -36,8 +45,13 @@ workflow that builds the debug APK in the cloud:
    `main`. You can also trigger it manually: **Actions** tab → **Build DualTrack APK** →
    **Run workflow**.
 4. When the build finishes, open the run → scroll to **Artifacts** → download
-   `dualtrack-debug-apk`. It's a ZIP; extract it to get `app-debug.apk`.
-5. On your Android phone:
+   `dualtrack-debug-apk`. It's a ZIP; extract it to get the APK.
+5. To publish a new downloadable release instead, push a version tag:
+   ```bash
+   git tag v0.2.0 && git push origin v0.2.0
+   ```
+   The workflow will build the APK and attach it to a new GitHub Release automatically.
+6. On your Android phone:
    - Transfer the APK (USB, Google Drive, etc.) and open it.
    - Allow "Install unknown apps" for the app you opened it from.
    - Install. (You'll get a "built with a debug certificate" warning — that's normal.)

@@ -17,17 +17,18 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up JDK 17
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '17'
 
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
-
-      - name: Install build tools and platform
+      # ubuntu-latest runners ship with the Android SDK preinstalled at $ANDROID_HOME.
+      - name: Install exact SDK platform and build tools
+        shell: bash
         run: |
-          sdkmanager --install "platforms;android-35" "build-tools;35.0.0" "platform-tools"
+          SDKMGR=$(find "$ANDROID_HOME/cmdline-tools" -name sdkmanager -type f | head -1)
+          yes | "$SDKMGR" --licenses > /dev/null 2>&1 || true
+          "$SDKMGR" "platforms;android-35" "build-tools;35.0.0" "platform-tools"
 
       - name: Make Gradle wrapper executable
         run: chmod +x ./gradlew
